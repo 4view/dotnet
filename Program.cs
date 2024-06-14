@@ -8,38 +8,45 @@ class Program
 {
     static void Main(string[] args)
     {   
-       Car bmw = new Car("BMW");
+       var Rectangle = new Rectangle { Width = 20, Height = 5 };
 
-       bmw.Move();
+       var Circle = new Circle { Radius = 7 };
+
+        PrintShape(Rectangle);
+        PrintShape(Circle);
+
+       void PrintShape(Shape shape)
+       {
+        Console.WriteLine($"Perimeter: {shape.GetPerimeter()} Area: {shape.GetArea()}");
+       }
     }   
     
     
 }
 
-abstract class Transport
+abstract class Shape()
 {
+    public abstract double GetPerimeter();
 
-    public string Name { get; }
+    public abstract double GetArea();
 
-    public Transport(string name)
-    {
-        Name = name;
-    }
-    public void Move() => Console.WriteLine($"{Name} is moving");
 }
 
-class Ship : Transport 
+class Rectangle : Shape
 {
-    public Ship(string name) : base(name) {}
+    public float Height { get; set; }
+    public float Width { get; set; }
+
+    public override double GetPerimeter() => Width * 2 + Height * 2;
+
+    public override double GetArea() => Width * Height;
 }
 
-class Aircraft : Transport 
+class Circle : Shape
 {
-    public Aircraft(string name) : base(name) {}
-}
+    public double Radius { get; set; }
 
-class Car : Transport 
-{
-    public Car(string name) : base(name) {}
-}
+    public override double GetPerimeter() => Radius * 2 * 3.14;
 
+    public override double GetArea() => Radius * Radius * 3.14;
+}
