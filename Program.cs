@@ -11,9 +11,10 @@ class Program
 {
     static void Main(string[] args)
     {       
-        var value = new Branching("1234231", " ", "", null);
+        Console.WriteLine("                       HelloLLL");
+        var words = new TrimString("                 Hello  My  Friend");
 
-        value.BranchingIsNullOrWhiteSpace();
+        words.MyTrim();
 
     }     
     

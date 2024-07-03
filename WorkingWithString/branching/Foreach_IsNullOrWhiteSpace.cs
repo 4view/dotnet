@@ -1,7 +1,7 @@
-class Branching 
+class BranchingNOWS
 {
     string[] values = {};
-    public Branching(params string[] values)
+    public BranchingNOWS(params string[] values)
     {
         this.values = values;
     }
