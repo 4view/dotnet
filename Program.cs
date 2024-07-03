@@ -5,17 +5,15 @@ using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Collections.Generic;
 using System;
+using System.Text;
 
 
 class Program
 {
     static void Main(string[] args)
     {       
-        Console.WriteLine("                       HelloLLL");
-        var words = new TrimString("                 Hello  My  Friend");
-
-        words.MyTrim();
-
+        var NewChar = new CharOutOfString("Jopa");
+        NewChar.MyChar();
     }     
     
 }
