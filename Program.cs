@@ -12,9 +12,9 @@ class Program
 {
     static void Main(string[] args)
     {       
-        var NewChar = new CharOutOfString("Jopa");
-        NewChar.MyChar();
+        
     }     
     
 }
+
 
